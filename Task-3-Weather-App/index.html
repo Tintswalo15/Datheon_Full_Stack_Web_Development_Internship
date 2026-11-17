@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherNow | Live Weather Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body class="sunny">
+
+    <!-- Main Application Container -->
+    <main class="weather-container">
+
+        <!-- Header Section -->
+        <header class="header">
+            <h1>WeatherNow</h1>
+            <p>Your daily weather companion</p>
+        </header>
+
+        <!-- City Search Section -->
+        <section class="search-section">
+            <form id="search-form">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Search for a city..."
+                    aria-label="Enter city name"
+                    required
+                >
+
+                <button type="submit" id="search-btn">
+                    Search
+                </button>
+            </form>
+        </section>
+
+        <!-- Loading Message -->
+        <div id="loading" class="loading hidden">
+            <p>Getting weather information...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message hidden" role="alert">
+            <p>City not found. Please try another city.</p>
+        </div>
+
+        <!-- Current Weather Section -->
+        <section class="current-weather">
+
+            <div class="location">
+                <h2 id="city-name">Pretoria</h2>
+                <p id="current-date">Today's Weather</p>
+            </div>
+
+            <div class="weather-main">
+
+                <div class="weather-icon">
+                    <img
+                        id="weather-icon"
+                        src="https://openweathermap.org/img/wn/01d@2x.png"
+                        alt="Weather condition"
+                    >
+                </div>
+
+                <div class="temperature">
+                    <h2 id="temperature">--°C</h2>
+                    <p id="weather-description">Weather condition</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Weather Information Cards -->
+        <section class="weather-details">
+
+            <div class="weather-card">
+                <h3>Humidity</h3>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>Wind Speed</h3>
+                <p id="wind-speed">-- m/s</p>
+            </div>
+
+            <div class="weather-card">
+                <h3>Pressure</h3>
+                <p id="pressure">-- hPa</p>
+            </div>
+
+        </section>
+
+        <!-- Five-Day Forecast Section -->
+        <section class="forecast-section">
+
+            <h2>5-Day Weather Forecast</h2>
+
+            <div id="forecast-container" class="forecast-container">
+
+                <!-- Forecast cards will be added using JavaScript -->
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>WeatherNow &copy; 2026 | Powered by OpenWeatherMap</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
